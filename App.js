@@ -1,20 +1,34 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import {
+  Image,
+  ScrollView,
+  StatusBar,
+  Text,
+  TextInput,
+  View,
+} from "react-native";
 
+const Cat = () => {
+  return (
+    <View>
+      <Text>I am also a cat</Text>
+    </View>
+  );
+};
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View>
+      <Text>Welcome</Text>
+      <Cat />
+      <Cat />
+      <Cat />
+      <Cat />
+      <Image
+        source={{
+          uri: "https://i.imgur.com/kWDfQRS_d.webp?maxwidth=760&fidelity=grand",
+        }}
+        style={{ width: 400, height: 400 }}
+      />
+      <StatusBar />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
